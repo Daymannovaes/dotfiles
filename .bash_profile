@@ -28,3 +28,5 @@ alias http-server="python -m SimpleHTTPServer"
 
 alias vimrc="vim ~/.vimrc"
 alias bashprofile="vim ~/.bash_profile"
+
+alias dot-update="cd ~/workspace/dotiles && git pull && cp ~/.bash_profile .bash_profile && git commit -nam \"update\" && git push"
