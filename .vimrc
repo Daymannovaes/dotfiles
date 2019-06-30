@@ -32,6 +32,8 @@ Plugin 'mattn/emmet-vim' " shortcut for html
 Plugin 'metakirby5/codi.vim' " run :Codi to turn the terminal into a javascript console
 Plugin 'jpalardy/vim-slime' " another plugin to turn vim into REPL
 
+Plugin 'christoomey/vim-tmux-navigator'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -148,6 +150,8 @@ nmap <Leader>de idescribe('', function(){<Enter><Enter>});<Esc>k\it<Esc>>1jk0f'a
     inoremap Oo <Esc>o
 " press UU to undo last change
     inoremap UU <Esc>ui
+
+let g:slime_target = "tmux"
 
 let g:NERDSpaceDelims = 1
 
