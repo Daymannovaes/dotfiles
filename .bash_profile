@@ -34,7 +34,8 @@ alias ctag-project="ctags -R -f ./.git/tags ."
 alias vimrc="vim ~/.vimrc"
 alias bashprofile="vim ~/.bash_profile"
 
-alias dot-update="cd ~/workspace/dotiles && git pull && cp ~/.bash_profile .bash_profile && cp ~/.vimrc .vimrc && cp ~/.gitignore .gitignore && git commit -nam \"update\" && git push"
+alias dot-update="cd ~/workspace/dotiles && git pull && cp ~/.bash_profile .bash_profile && cp
+~/.vimrc .vimrc && cp ~/.gitignore .gitignore && git add --all  && git commit -m \"update\" && git push"
 
 alias gs="git status"
 alias gd="git diff"
