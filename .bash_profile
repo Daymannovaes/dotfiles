@@ -36,7 +36,7 @@ alias bashprofile="vim ~/.bash_profile"
 alias tmuxrc="vim ~/.tmux.conf"
 alias tmux-update="tmux source-file ~/.tmux.conf"
 
-alias dot-update="cd ~/workspace/dotiles && git pull && cp ~/.bash_profile .bash_profile && cp ~/.vimrc .vimrc && cp ~/.gitignore .gitignore && ~/.tmux.conf .tmux.conf  && git add --all  && git commit -m \"update\" && git push"
+alias dot-update="cd ~/workspace/dotiles && git pull && cp ~/.bash_profile .bash_profile && cp ~/.vimrc .vimrc && cp ~/.gitignore .gitignore && cp ~/.tmux.conf .tmux.conf  && git add --all  && git commit -m \"update\" && git push"
 
 alias gs="git status"
 alias gd="git diff"
