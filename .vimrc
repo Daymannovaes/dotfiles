@@ -74,8 +74,10 @@ nnoremap <leader>k :call RunKarma()<cr>
 nnoremap <leader>t :call RunNearestTest()<cr>
 nnoremap <leader>y :call RunTestFile()<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
-" press \s to replace word under cursor
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+" press \R to replace word under cursor in all the file
+nnoremap <Leader>R :%s/\<<C-r><C-w>\>//g<Left><Left>
+" press \r to replace word under cursor in the current line
+nnoremap <Leader>r :s/\<<C-r><C-w>\>//g<Left><Left>
 " press \f to find in all files
 map <leader>f :Ack!<space>
 " press s to insert only one char
@@ -111,7 +113,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <Leader><Leader> <C-^>
 
 " activate emmet with control-z
-let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_leader_key='<C-z>'
 
 " [SNIPPETS]
 function! ConsoleO(type)

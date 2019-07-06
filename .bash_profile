@@ -7,6 +7,10 @@ export NVM_DIR="$HOME/.nvm"
 # colors
 PS1='\w\[\033[0;32m\]$( git branch 2> /dev/null | cut -f2 -d\* -s | sed "s/^ / [/" | sed "s/$/]/" )\[\033[0m\] \$ '
 
+# set VIM to edit git merge
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
