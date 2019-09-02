@@ -1,5 +1,11 @@
 source ~/git-completion.bash
 
+#PATH EXPORTS
+NODE_MODULES=$HOME/.npm
+NPM_PACKAGES=$HOME/.npm-global/bin
+export PATH=$PATH:$HOME/bin:$NODE_MODULES:$NPM_PACKAGES
+
+#NVM ENABLE
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -23,13 +29,14 @@ alias startmongo='ulimit -n 2048 && mongod'
 alias gitpush='git push -u origin `git rev-parse --abbrev-ref HEAD`'
 alias tenfold-start-dashboard="cd ~/workspace/callinize-node-server && NODE_ENV=production MOCK_ENVIRONMENT=local-db TRANSLATIONS_BUCKET=tenfold-translations-draft node _dashboard/server/dashboard.js --port 3000"
 alias tenfold-start-dashboard-2="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=production NODE_ENV=production TRANSLATIONS_BUCKET=tenfold-translations-draft node _dashboard/server/dashboard.js --port 3000"
-alias tenfold-start-api="cd ~/workspace/callinize-node-server && NODE_ENV=production MOCK_ENVIRONMENT=local-db  node _api/api.js"
+alias tenfold-start-api="cd ~/workspace/callinize-node-server TENFOLD_CONFIG_NAME=development node _api/api.js"
 alias tenfold-start-api-2="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=production NODE_ENV=production node _api/api.js"
 alias tenfold-build-ce="~/workspace/callinize-chrome-extension/node_modules/.bin/grunt build-dev"
 alias tenfold-build-ce-local="~/workspace/callinize-chrome-extension/node_modules/.bin/grunt build-dev --local"
 alias tenfold-tag-ce="ctags -R -f ./.git/tags --exclude=dist --exclude=.tmp --exclude=v2 --exclude=ssl --exclude=src/popup/bower_components ."
 alias tenfold-tag-node="ctags --exclude=bin --exclude=docs --exclude=coverage --exclude=config --exclude=ssl --exclude=uploads"
 alias tenfold-mongo="mongo callinize --norc"
+alias tenfold-elastic="docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:5.5.0-alpine"
 alias http-server="python -m SimpleHTTPServer"
 
 # ctag all files and put this inside .git folder

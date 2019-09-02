@@ -94,6 +94,10 @@ nnoremap <Leader>O :set paste<CR>m`O<Esc>``:set nopaste<CR>
 " press // in visual mode to search for selected text
 vnoremap // y/<C-R>"<CR>
 
+" control v + control c to copy to clipboard
+vnoremap <C-v><C-c> :w !pbcopy<CR><CR>
+inoremap <C-v><C-v> :r !pbpaste<CR><CR>
+
 " use Bd to safely delete current buffer
 nnoremap Bd :bp\|bd #<CR>
 
@@ -219,9 +223,10 @@ nmap <leader>y :call RunTestFile()<cr>
 function! RunTests(filename, complement)
   :w
   :silent !clear
-   let command = ":!NODE_ENV=test ./node_modules/.bin/jest ".a:filename." ".a:complement
+   let command = ":!NODE_ENV=test ./node_modules/.bin/_mocha ".a:filename." ".a:complement
    echo command
    exec command
+   echo command
 endfunction
 " Thanks https://github.com/chrishunt
 function! SetTestFile()
@@ -278,7 +283,7 @@ function! RunNearestTest(...)
 	elseif !exists("g:nearestTest")
 		return
 	end
-	call RunTests(g:grb_test_file, " -t '".g:nearestTest."'")
+	call RunTests(g:grb_test_file, " -g '".g:nearestTest."'")
 endfunction
 
 
