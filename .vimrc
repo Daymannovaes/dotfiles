@@ -215,6 +215,13 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 function! RunKarma()
     :w
     :silent !clear
+    call SetTestFile();
+    exec "karma start".g:grb_test_file
+endfunction
+
+function! __old_RunKarma()
+    :w
+    :silent !clear
     exec "!./node_modules/.bin/grunt karma"
 endfunction
 
@@ -226,7 +233,6 @@ function! RunTests(filename, complement)
    let command = ":!NODE_ENV=test ./node_modules/.bin/_mocha ".a:filename." ".a:complement
    echo command
    exec command
-   echo command
 endfunction
 " Thanks https://github.com/chrishunt
 function! SetTestFile()

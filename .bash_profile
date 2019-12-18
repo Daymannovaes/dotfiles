@@ -25,12 +25,12 @@ export CLICOLOR=1
 export CLICOLOR=1
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
-alias startmongo='ulimit -n 2048 && mongod'
-alias gitpush='git push -u origin `git rev-parse --abbrev-ref HEAD`'
-alias tenfold-start-dashboard="cd ~/workspace/callinize-node-server && NODE_ENV=production MOCK_ENVIRONMENT=local-db TRANSLATIONS_BUCKET=tenfold-translations-draft node _dashboard/server/dashboard.js --port 3000"
-alias tenfold-start-dashboard-2="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=production NODE_ENV=production TRANSLATIONS_BUCKET=tenfold-translations-draft node _dashboard/server/dashboard.js --port 3000"
-alias tenfold-start-api="cd ~/workspace/callinize-node-server TENFOLD_CONFIG_NAME=development node _api/api.js"
-alias tenfold-start-api-2="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=production NODE_ENV=production node _api/api.js"
+alias startmongo='ulimit -n 2048 && mongod --dbpath ~/data/db'
+alias gpusho='git push -u origin `git rev-parse --abbrev-ref HEAD`'
+alias gpush='git push'
+alias tenfold-start-dashboard="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=development node _dashboard/server/dashboard.js --port 3000"
+alias tenfold-start-api="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=development node _api/api.js"
+alias tenfold-start-worker="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=development node _scheduler/scheduler.js"
 alias tenfold-build-ce="~/workspace/callinize-chrome-extension/node_modules/.bin/grunt build-dev"
 alias tenfold-build-ce-local="~/workspace/callinize-chrome-extension/node_modules/.bin/grunt build-dev --local"
 alias tenfold-tag-ce="ctags -R -f ./.git/tags --exclude=dist --exclude=.tmp --exclude=v2 --exclude=ssl --exclude=src/popup/bower_components ."
@@ -50,11 +50,14 @@ alias tmux-update="tmux source-file ~/.tmux.conf"
 alias dot-update="cd ~/workspace/dotiles && git pull && cp ~/.bash_profile .bash_profile && cp ~/.vimrc .vimrc && cp ~/.gitignore .gitignore && cp ~/.tmux.conf .tmux.conf  && git add --all  && git commit -m \"update\" && git push"
 
 alias gs="git status"
+alias ga="git add"
 alias gd="git diff"
 alias gl="git log"
 alias gdb="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gc="git checkout"
+alias gco="git checkout"
+alias gcm="git commit"
 alias gp="git pull"
+alias gcp="git cherry-pick"
 
 function tenfold_ofo() {
     open "https://console.firebase.google.com/u/1/project/incandescent-inferno-925/database/incandescent-inferno-925/data/organizations/$1"
