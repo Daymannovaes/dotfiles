@@ -3,12 +3,16 @@ source ~/git-completion.bash
 #PATH EXPORTS
 NODE_MODULES=$HOME/.npm
 NPM_PACKAGES=$HOME/.npm-global/bin
-export PATH=$PATH:$HOME/bin:$NODE_MODULES:$NPM_PACKAGES
+GIT_FLOW=$HOME/workspace/sindi
+export PATH=$PATH:$HOME/bin:$NODE_MODULES:$NPM_PACKAGES:$GIT_FLOW
 
 #NVM ENABLE
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source ~/sh/nvm-auto-switch.sh
+nvm_auto_switch
 
 # colors
 PS1='\w\[\033[0;32m\]$( git branch 2> /dev/null | cut -f2 -d\* -s | sed "s/^ / [/" | sed "s/$/]/" )\[\033[0m\] \$ '
@@ -47,7 +51,7 @@ alias bashprofile="vim ~/.bash_profile"
 alias tmuxrc="vim ~/.tmux.conf"
 alias tmux-update="tmux source-file ~/.tmux.conf"
 
-alias dot-update="cd ~/workspace/dotiles && git pull && cp ~/.bash_profile .bash_profile && cp ~/.vimrc .vimrc && cp ~/.gitignore .gitignore && cp ~/.tmux.conf .tmux.conf  && git add --all  && git commit -m \"update\" && git push"
+alias dot-update="cd ~/workspace/dotiles && git pull && cp ~/.bash_profile .bash_profile && cp ~/.vimrc .vimrc && cp ~/.gitignore .gitignore && cp ~/.tmux.conf .tmux.conf && cp ~/sh/nvm-auto-switch.sh nvm-auto-switch.sh && git add --all && git commit -m \"update\" && git push"
 
 alias gs="git status"
 alias ga="git add"
