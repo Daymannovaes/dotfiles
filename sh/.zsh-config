@@ -50,6 +50,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   bgnotify
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
