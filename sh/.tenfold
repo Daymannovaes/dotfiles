@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+alias tenfold-start-dashboard="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=development node _dashboard/server/dashboard.js --port 3000"
+alias tenfold-start-api="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=development node _api/api.js"
+alias tenfold-start-worker="cd ~/workspace/callinize-node-server && TENFOLD_CONFIG_NAME=development node _scheduler/scheduler.js"
+alias tenfold-build-ce="~/workspace/callinize-chrome-extension/node_modules/.bin/grunt build-dev"
+alias tenfold-build-ce-local="~/workspace/callinize-chrome-extension/node_modules/.bin/grunt build-dev --local"
+alias tenfold-tag-ce="ctags -R -f ./.git/tags --exclude=dist --exclude=.tmp --exclude=v2 --exclude=ssl --exclude=src/popup/bower_components ."
+alias tenfold-tag-node="ctags --exclude=bin --exclude=docs --exclude=coverage --exclude=config --exclude=ssl --exclude=uploads"
+alias tenfold-mongo="mongo callinize --norc"
+alias tenfold-elastic="docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:5.5.0-alpine"
+alias http-server="python -m SimpleHTTPServer"
+
+function tenfold_ofo() {
+    open "https://console.firebase.google.com/u/1/project/incandescent-inferno-925/database/incandescent-inferno-925/data/organizations/$1"
+}
