@@ -30,6 +30,8 @@ export EDITOR="$VISUAL"
 
 
 # ---- SYMBOLIC LINKS, from ~/sh to ~/
-ln -fs sh/.vimrc .vimrc
-ln -fs sh/.tmux.conf .tmux.conf
-ln -fs sh/.bash_profile .bash_profile
+ln -fs ~/sh/.vimrc ~/.vimrc
+ln -fs ~/sh/.tmux.conf ~/.tmux.conf
+ln -fs ~/sh/.gitignore ~/.gitignore
+ln -fs ~/sh/.editorconfig ~/.editorconfig
+ln -fs ~/sh/.bash_profile ~/.bash_profile
