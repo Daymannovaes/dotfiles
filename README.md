@@ -1,4 +1,4 @@
-# dotiles
+# dotfiles
 
 ## Install
 ```
