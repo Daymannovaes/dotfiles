@@ -4,6 +4,8 @@ source ~/sh/.zsh-config
 # ---- environment configs, such $PATH, EDITOR, HISTORY end NVM
 source ~/sh/.shell-config
 
+source ~/sh/.android-config
+
 source ~/sh/.tenfold
 source ~/sh/.aliases
 
