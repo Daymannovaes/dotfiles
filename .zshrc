@@ -7,6 +7,7 @@ source ~/sh/.shell-config
 source ~/sh/.android-config
 
 source ~/sh/.tenfold
+source ~/sh/.mindsciences
 source ~/sh/.aliases
 
 # disabled because it slows down all "cd" commands

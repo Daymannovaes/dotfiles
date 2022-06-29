@@ -14,7 +14,7 @@ export PATH=$PATH:$HOME/bin
 
 
 # ---- ASDF ENABLE
-. /usr/local/opt/asdf/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 # ---- NVM ENABLE
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

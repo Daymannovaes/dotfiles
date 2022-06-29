@@ -15,3 +15,10 @@ alias aliases="vim ~/sh/.aliases"
 alias bashprofile="vim ~/.bash_profile"
 alias tmuxrc="vim ~/.tmux.conf"
 alias tmux-update="tmux source-file ~/.tmux.conf"
+
+alias say-cabou="say 'cabou' --voice Luciana"
+
+alias nisc="say 'instalando' --voice Luciana && npm install && say-cabou"
+
+gfeature() { git checkout feat/$1 2>/dev/null || git checkout -b feat/$1; }
+

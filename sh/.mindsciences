@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+alias bscdw="sh build-scripts/ctq-dev-web.sh"
+alias bscda="sh build-scripts/ctq-dev-android.sh"
+alias bscdi="sh build-scripts/ctq-dev-ios.sh"
+
+alias bscpw="sh build-scripts/ctq-prod-web.sh"
+alias bscpa="sh build-scripts/ctq-prod-android.sh"
+alias bscpi="sh build-scripts/ctq-prod-ios.sh"
+
+alias bsedw="sh build-scripts/ern-dev-web.sh"
+alias bseda="sh build-scripts/ern-dev-android.sh"
+alias bsedi="sh build-scripts/ern-dev-ios.sh"
+
+alias bsepw="sh build-scripts/ern-prod-web.sh"
+alias bsepa="sh build-scripts/ern-prod-android.sh"
+alias bsepi="sh build-scripts/ern-prod-ios.sh"
+
+alias bsudw="sh build-scripts/ua-dev-web.sh"
+alias bsuda="sh build-scripts/ua-dev-android.sh"
+alias bsudi="sh build-scripts/ua-dev-ios.sh"
+
+alias bsupw="sh build-scripts/ua-prod-web.sh"
+alias bsupa="sh build-scripts/ua-prod-android.sh"
+alias bsupi="sh build-scripts/ua-prod-ios.sh"
+
