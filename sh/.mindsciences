@@ -1,26 +1,29 @@
 #!/bin/zsh
 
-alias bscdw="sh build-scripts/ctq-dev-web.sh"
-alias bscda="sh build-scripts/ctq-dev-android.sh"
-alias bscdi="sh build-scripts/ctq-dev-ios.sh"
 
-alias bscpw="sh build-scripts/ctq-prod-web.sh"
-alias bscpa="sh build-scripts/ctq-prod-android.sh"
-alias bscpi="sh build-scripts/ctq-prod-ios.sh"
+alias say-construindo="say 'construindo' --voice Luciana"
 
-alias bsedw="sh build-scripts/ern-dev-web.sh"
-alias bseda="sh build-scripts/ern-dev-android.sh"
-alias bsedi="sh build-scripts/ern-dev-ios.sh"
+alias bscdw="say-construindo && sh build-scripts/ctq-dev-web.sh && say-cabou"
+alias bscda="say-construindo && sh build-scripts/ctq-dev-android.sh && say-cabou"
+alias bscdi="say-construindo && sh build-scripts/ctq-dev-ios.sh && say-cabou"
 
-alias bsepw="sh build-scripts/ern-prod-web.sh"
-alias bsepa="sh build-scripts/ern-prod-android.sh"
-alias bsepi="sh build-scripts/ern-prod-ios.sh"
+alias bscpw="say-construindo && sh build-scripts/ctq-prod-web.sh && say-cabou"
+alias bscpa="say-construindo && sh build-scripts/ctq-prod-android.sh && say-cabou"
+alias bscpi="say-construindo && sh build-scripts/ctq-prod-ios.sh && say-cabou"
 
-alias bsudw="sh build-scripts/ua-dev-web.sh"
-alias bsuda="sh build-scripts/ua-dev-android.sh"
-alias bsudi="sh build-scripts/ua-dev-ios.sh"
+alias bsedw="say-construindo && sh build-scripts/ern-dev-web.sh && say-cabou"
+alias bseda="say-construindo && sh build-scripts/ern-dev-android.sh && say-cabou"
+alias bsedi="say-construindo && sh build-scripts/ern-dev-ios.sh && say-cabou"
 
-alias bsupw="sh build-scripts/ua-prod-web.sh"
-alias bsupa="sh build-scripts/ua-prod-android.sh"
-alias bsupi="sh build-scripts/ua-prod-ios.sh"
+alias bsepw="say-construindo && sh build-scripts/ern-prod-web.sh && say-cabou"
+alias bsepa="say-construindo && sh build-scripts/ern-prod-android.sh && say-cabou"
+alias bsepi="say-construindo && sh build-scripts/ern-prod-ios.sh && say-cabou"
+
+alias bsudw="say-construindo && sh build-scripts/ua-dev-web.sh && say-cabou"
+alias bsuda="say-construindo && sh build-scripts/ua-dev-android.sh && say-cabou"
+alias bsudi="say-construindo && sh build-scripts/ua-dev-ios.sh && say-cabou"
+
+alias bsupw="say-construindo && sh build-scripts/ua-prod-web.sh && say-cabou"
+alias bsupa="say-construindo && sh build-scripts/ua-prod-android.sh && say-cabou"
+alias bsupi="say-construindo && sh build-scripts/ua-prod-ios.sh && say-cabou"
 
