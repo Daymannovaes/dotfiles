@@ -3,6 +3,10 @@
 # run as:
 #   sh -c "$(curl -fsSL https://raw.githubusercontent.com/Daymannovaes/dotfiles/master/install.sh)"
 
+# installs oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
 DOTPATH=${DOTPATH:-~/dotfiles}
 REMOTE=${REMOTE:-https://github.com/Daymannovaes/dotfiles.git}
 BRANCH=${BRANCH:-master}
