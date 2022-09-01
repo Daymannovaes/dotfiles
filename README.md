@@ -1,5 +1,8 @@
 # dotfiles
 
+- Install brew
+- Install gh (https://cli.github.com/)
+
 ## Install
 #### automatically
 ```
