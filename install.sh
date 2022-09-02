@@ -3,7 +3,10 @@
 # run as:
 #   sh -c "$(curl -fsSL https://raw.githubusercontent.com/Daymannovaes/dotfiles/master/install.sh)"
 
-# installs oh-my-zsh
+# install gh
+brew install gh
+
+# install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install asdf
