@@ -16,7 +16,7 @@ Plugin 'itchyny/lightline.vim' " the line showing at the bottom of vim
 Plugin 'itchyny/vim-gitbranch' " plugin for lightline
 Plugin 'ctrlpvim/ctrlp.vim' " find file with control-p
 Plugin 'jeetsukumaran/vim-buffergator' " add the buffer at \b
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree' " open file explorer with \n or control-b
 Plugin 'Xuyuanp/nerdtree-git-plugin' " show git tag in nerd tree
 Plugin 'tpope/vim-repeat' " extend the dot (.) vim for non-native commands
