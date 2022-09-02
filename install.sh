@@ -13,7 +13,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 brew install asdf
 
 
-
 DOTPATH=${DOTPATH:-~/dotfiles}
 REMOTE=${REMOTE:-https://github.com/Daymannovaes/dotfiles.git}
 BRANCH=${BRANCH:-master}
