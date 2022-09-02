@@ -8,8 +8,12 @@
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Daymannovaes/dotfiles/master/install.sh)"
 ```
 
-- then install szh plugins
-- then install vim plugins
+### then install vim plugins
+
+- Install vundle: https://github.com/VundleVim/Vundle.vim
+
+
+### then install szh plugins
 
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
