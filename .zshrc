@@ -18,7 +18,7 @@ source ~/sh/.mindsciences
 source ~/sh/.aliases
 
 touch ~/sh/.private_env
-source ~/sh/.private_env
+source ~/sh/.private_env # add private environment variables here. This file won't be push to the repo
 
 # disabled because it slows down all "cd" commands
 # source ~/sh/nvm-auto-switch.sh
