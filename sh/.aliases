@@ -3,7 +3,7 @@
 # run `dot-update "some message"` in the terminal to update dot files
 dot-copy() { cd ~/workspace/dotfiles && git pull && cp ~/.zshrc .zshrc && cp -r ~/sh }
 dot-commit() { cd ~/workspace/dotfiles && git add --all && git commit -m "$1" && git push }
-dot-update() { cd ~/workspace/dotfiles && git pull && cp ~/.zshrc .zshrc && cp -r ~/sh . && git add --all && git commit -m "$1" && git push }
+dot-update() { cd ~/workspace/dotfiles && git pull && cp ~/.zshrc .zshrc && cp -r ~/sh . && rm sh/.private_env && git add --all && git commit -m "$1" && git push }
 
 # ctag all files and put this inside .git folder
 alias ctag-project="ctags -R -f ./.git/tags ."
