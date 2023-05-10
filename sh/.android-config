@@ -3,7 +3,7 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 
 # if java gets updated, we need to upgrade this path again
-export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/Contents/Home'
+export JAVA_HOME=/Applications/Android\ Studio.app/Contents/jbr/Contents/Home
 
 # if gradle gets updated, we need to update this path again
 # export GRADLE_PATH=$HOME/.gradle/wrapper/dists/gradle-6.5-bin/6nifqtx7604sqp1q6g8wikw7p/gradle-6.5/bin
