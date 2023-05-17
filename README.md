@@ -25,7 +25,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ```
   git clone git@github.com:Daymannovaes/dotfiles.git ~/workspace/dotfiles
   cd ~/workspace/dotfiles
-  
+
   mv .zhrc ~/.zhrc
   mv sh/ ~/sh/
 ```
