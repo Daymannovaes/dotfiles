@@ -24,3 +24,16 @@ alias nisc="say 'instalando' --voice Luciana && npm install && say-cabou"
 
 gfeature() { git checkout feat/$1 2>/dev/null || git checkout -b feat/$1; }
 
+get_cim_link() {
+  local id=$1
+  local token='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg2OTMxOTU3LCJqdGkiOiIyYjYwMDE2ZGFlYTk0YTU0YjRhZmQ0ZTM0YmVlNTAzZSIsInVzZXJfaWQiOjM4NzUsInR5cGUiOiJkb2N0b3IiLCJlbWFpbCI6ImRheW1hbm5vdmFlc0BnbWFpbC5jb20ifQ.XAHQfpBpraiJl_8XSMw3Z_W_2ezm16NeBtWysov69ETeihR7-5Z7PNdMG7zFRPKqLzzqdogQY__PliOyHElkjQ'
+
+  local command="curl -s 'https://api.certificacaoitalomarsili.com.br/v1/lives/$id' -H 'authority: api.certificacaoitalomarsili.com.br' -H 'accept: application/json, text/plain, */*' -H 'accept-language: en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7,sv;q=0.6,nl;q=0.5' -H 'authorization: JWT $token' -H 'cache-control: no-cache' -H 'origin: https://app.certificacaoitalomarsili.com.br' -H 'pragma: no-cache' -H 'referer: https://app.certificacaoitalomarsili.com.br/' -H 'sec-ch-ua: \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"' -H 'sec-ch-ua-mobile: ?1' -H 'sec-ch-ua-platform: \"Android\"' -H 'sec-fetch-dest: empty' -H 'sec-fetch-mode: cors' -H 'sec-fetch-site: same-site' -H 'user-agent: Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36' --compressed | jq -r '.yt_link'"
+  local result=$(eval "$command")
+  echo "$result"
+}
+
+open_cim_link() {
+  open `get_cim_link $1`
+}
+
