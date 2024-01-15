@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+DIR="$( cd "$( dirname "$0" )" >/dev/null && pwd )"
 
 alias say-construindo="say 'construindo' --voice Luciana"
 appclarity="apps/clarity"
@@ -28,3 +29,4 @@ alias bsupw="say-construindo && sh $appclarity/build-scripts/ua-prod-web.sh && s
 alias bsupa="say-construindo && sh $appclarity/build-scripts/ua-prod-android.sh && say-cabou"
 alias bsupi="say-construindo && sh $appclarity/build-scripts/ua-prod-ios.sh && say-cabou"
 
+alias acopen="npx zx $DIR/mindsciences-appcenter-open.mjs"

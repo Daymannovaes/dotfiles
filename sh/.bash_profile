@@ -4,7 +4,7 @@ source ~/git-completion.bash
 NODE_MODULES=$HOME/.npm
 NPM_PACKAGES=$HOME/.npm-global/bin
 GIT_FLOW=$HOME/workspace/sindi
-export PATH=$PATH:$HOME/bin:$NODE_MODULES:$NPM_PACKAGES:$GIT_FLOW
+export PATH=$PATH:$HOME/bin:$NODE_MODULES:$NPM_PACKAGES:$GIT_FLOW:/Users/daymannovaes/workspace
 
 #NVM ENABLE
 export NVM_DIR="$HOME/.nvm"
