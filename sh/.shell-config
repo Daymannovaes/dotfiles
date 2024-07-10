@@ -10,6 +10,9 @@ NPM_PACKAGES=$HOME/.npm-global/bin
 GIT_FLOW=$HOME/workspace/sindi
 # export PATH=$PATH:$GIT_FLOW
 
+export GGML_AI_MODELS_PATH=$HOME/workspace/ggml-models
+# export PATH=$PATH:$GGML_AI_MODELS
+
 export PATH=$PATH:$HOME/bin
 
 # add wireshark commands
