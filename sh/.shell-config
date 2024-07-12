@@ -14,6 +14,7 @@ export GGML_AI_MODELS_PATH=$HOME/workspace/ggml-models
 # export PATH=$PATH:$GGML_AI_MODELS
 
 # emscript script to add emscript to path
+export EMSDK_QUIET=1
 source "/Users/daymannovaes/workspace/emsdk/emsdk_env.sh"
 
 export PATH=$PATH:$HOME/bin
