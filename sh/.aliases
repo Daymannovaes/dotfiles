@@ -22,6 +22,8 @@ alias say-cabou="say 'cabou' --voice Luciana"
 
 alias nisc="say 'instalando' --voice Luciana && npm install && say-cabou"
 
+alias media-to-srt="sh /Users/daymannovaes/workspace/video-record-pipeline/0-generate-srt-from-video.sh"
+
 gfeature() { git checkout feat/$1 2>/dev/null || git checkout -b feat/$1; }
 
 get_cim_link() {
