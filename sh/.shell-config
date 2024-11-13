@@ -22,6 +22,8 @@ export PATH=$PATH:$HOME/bin
 # add gopath and goroot if go shim exists
 [ -f ~/.asdf/plugins/golang/set-env.zsh ] && . ~/.asdf/plugins/golang/set-env.zsh || true
 
+export FLUTTER_ROOT="$(asdf where flutter)"
+
 
 # add wireshark commands
 export PATH=$PATH:/Applications/Wireshark.app/Contents/MacOS
